@@ -27,17 +27,29 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-
-
-
+    
     <title>my pwa</title>
 </head>
 
+<script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function() {  
+            navigator.serviceWorker.register("/sw.js").then(
+                function(registration) {
+                // Registration was successful
+                console.log("ServiceWorker registration successful with scope: ", registration.scope); },
+                function(err) {
+                // registration failed :(
+                console.log("ServiceWorker registration failed: ", err);
+                });
+            });
+        }
+</script>
+    
 <body>
     <h1 align="center" style="margin-top: 15px;">Какой сериал выбрать?</h1>
     <h6 align="center" style="margin-top: 10px; margin-bottom: 40px;">Здесь вы можете заполнить форму и отслеживать сериалы, которые вы просмотрели или хотели бы посмотреть</h6>
@@ -144,20 +156,7 @@
         </div>
     </div>
 
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", function() {  
-            navigator.serviceWorker.register("/sw.js").then(
-                function(registration) {
-                // Registration was successful
-                console.log("ServiceWorker registration successful with scope: ", registration.scope); },
-                function(err) {
-                // registration failed :(
-                console.log("ServiceWorker registration failed: ", err);
-                });
-            });
-        }
-    </script>
+    
 
 </body>
 
