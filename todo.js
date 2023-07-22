@@ -79,7 +79,7 @@ function addToDoToHtml(newToDo) {
 
                                 
                                 <div class="col d-flex" style="margin-top:30px;">
-                                    <button type="button" class="btn btn-danger" onclick="deleteElement(${newToDo.id})"> <img src="trash.png" width="27" height="29" align="center"> </button>
+                                    <button type="button" class="btn btn-danger" onclick="deleteElement(${newToDo.id})"> <img src="images/trash.png" width="27" height="29" align="center"> </button>
                                     <button type="button" class="btn btn-outline-primary btn-lg" style="margin:0 5px;" onclick="moveItem('top',${newToDo.id})"> 🠕 </button>
                                     <button type="button" class="btn btn-outline-primary btn-lg" style="margin:0 5px" onclick="moveItem('bottom',${newToDo.id})"> ↓ </button>
                                 </div>
