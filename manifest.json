@@ -5,7 +5,7 @@
     "background_color": "#a8d8ff",
     "display": "standalone",
     "orientation": "portrait",
-    "start_url": "my_serial",
+    "start_url": ".",
     "icons": [
     {
     "src": "icon/android-icon-36x36.png",
